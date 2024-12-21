@@ -1,16 +1,17 @@
 spring:
   application:
-    name: ${SPRING_APPLICATION_NAME}
+    name: rentitup
+
 
   datasource:
-    url: ${POSTGRES_URL}
-    username: ${POSTGRES_USER}
-    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgresql://localhost:5435/rentitups
+    username: administrator
+    password: qwerty1234
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: false
     properties:
       hibernate:
@@ -19,12 +20,14 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 jwt:
-  secret: ${JWT_SECRET}
-  expiration: ${JWT_EXPIRATION}
+  secret: 5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437
+  expiration: 86400000
 
 aws:
   s3:
-    access-key: ${AWS_ACCESS_KEY}
-    secret-key: ${AWS_SECRET_KEY}
+    access-key: AKIAVIOAD3DSP3BOOQ3S
+    secret-key: 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
 
-bucket-name: ${AWS_BUCKET_NAME}
+bucket-name: hotel-gallery
+
+
