@@ -1,8 +1,23 @@
 spring:
   application:
     name: rentitup
-
-
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mumbamarkian@gmail.com
+    password: fcadyqetkutmufmp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls: enable
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 15780816329-lvb8bli22grtdhs37s6jrgdehsa5fbdl.apps.googleusercontent.com
+            client-secret: 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
   datasource:
     url: jdbc:postgresql://localhost:5435/rentitups
     username: administrator
@@ -11,7 +26,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: false
     properties:
       hibernate:
@@ -28,6 +43,10 @@ aws:
     access-key: AKIAVIOAD3DSP3BOOQ3S
     secret-key: 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
 
+
 bucket-name: hotel-gallery
+
+frontend:
+  url: http://localhost:3000
 
 
